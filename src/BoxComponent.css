@@ -108,26 +108,32 @@
   animation-duration: 0.5s;
 }
 
-.container:hover .lid-container {
-  animation-name: bounce-2;
+.entire-box:hover .lid-container {
+  animation-name: lidBounce;
   animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
   transition: 0.3s;
 }
-.lid-animation {
-  animation-name: bounce-2;
+
+.lid-container[lidBounce="0"] {
+  animation-name: lidBounce;
   animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
-  transition: 0.3s;
 }
-.container:active {
+.entire-box[boxBounce="1"] {
+  animation-name: bounce-1;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
+
+/* .container:active {
   transform: scaleY(0.85);
-}
+} */
 
 .box-open {
   animation-duration: 0.5s;
   transform-origin: left;
-  transform: rotate(-85deg) translateY(2.1rem) translateX(1.5rem);
+  transform: rotate(-85deg) translateY(1.7rem) translateX(1.5rem);
   transition: 0.1s ease-in-out;
 }
 
@@ -142,7 +148,7 @@
   animation-timing-function: ease-in-out;
   transition: 0.3s;
 }
-@keyframes bounce-2 {
+@keyframes lidBounce {
   0% {
     transform: translateY(-2.4rem) scaleY(0.9);
   }
@@ -152,6 +158,7 @@
   50% {
     transform: translateY(-2.4rem) scaleY(0.9) rotate(-20deg);
   }
+
   100% {
     transform: translateY(-2.4rem) scaleY(0.98);
   }

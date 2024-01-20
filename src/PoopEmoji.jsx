@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./PoopEmoji.css";
 
 const PoopEmoji = ({ poopState }) => {
+  const [bounce, setBounce] = useState(0);
+
   return (
     <div className="emoji-box">
       <div className={poopState}>
-        <div className="emoji-translated">
+        <div
+          className="emoji-translated"
+          onClick={() => setBounce(1)}
+          onAnimationEnd={() => setBounce(0)}
+          bounce={bounce}
+        >
           <div className="poop-emoji">
             <div className="very-top">
               <div className="highlight-1"></div>

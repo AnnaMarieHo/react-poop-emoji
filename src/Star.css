@@ -1,0 +1,47 @@
+.star {
+  animation: starRotate1 1.5s ease-in-out infinite;
+  background-color: yellow;
+  clip-path: polygon(
+    50% 0,
+    56% 35%,
+    100% 50%,
+    65% 65%,
+    50% 100%,
+    35% 65%,
+    0% 50%,
+    35% 35%
+  );
+  transform: scale(0);
+}
+
+.star-2,
+.star-1 {
+  animation-name: starRotate2;
+}
+.star-1 {
+  animation-delay: calc(1.5s * 0.5);
+  top: 0;
+  left: 12.5em;
+  width: 1.5em;
+  height: 1.53em;
+}
+.star-2 {
+  animation-delay: calc(1.5s * 0.125);
+  top: 2em;
+  left: 10.5em;
+  width: 1.75em;
+  height: 1.75em;
+}
+@keyframes starRotate2 {
+  from {
+    transform: scale(0) rotate(0);
+  }
+  25% {
+    animation-timing-function: ease-out;
+    transform: scale(1) rotate(0.25turn);
+  }
+  50%,
+  to {
+    transform: scale(0) rotate(0.5turn);
+  }
+}

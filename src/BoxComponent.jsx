@@ -1,22 +1,32 @@
 import React, { useState } from "react";
-import Poop from "./PoopEmoji";
 import "./BoxComponent.css";
 
-export default function BoxComponent() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  function handleIsOpen() {
-    setIsOpen((e) => !e);
-  }
-
-  const openClass = isOpen ? "box-open" : " ";
-  const poopState = isOpen ? "poop-jump" : "whole-emoji";
+export default function BoxComponent({
+  handleIsOpen,
+  openClass,
+  onMouseOver,
+  onMouseOut,
+}) {
+  const [lidBounce, setLidBounce] = useState(0);
+  const [boxBounce, setBoxBounce] = useState(0);
 
   return (
     <>
-      <Poop poopState={poopState} />
-
-      <div className="entire-box">
+      <div
+        onMouseOver={onMouseOver}
+        onMouseOut={onMouseOut}
+        className="entire-box"
+        onClick={() => {
+          setLidBounce(1);
+          setBoxBounce(1);
+        }}
+        onAnimationEnd={() => {
+          setLidBounce(0);
+          setBoxBounce(0);
+        }}
+        lidBounce={lidBounce}
+        boxBounce={boxBounce}
+      >
         <div className="container" onClick={handleIsOpen}>
           <div className="box">
             <div className="ribbon-middle"></div>
