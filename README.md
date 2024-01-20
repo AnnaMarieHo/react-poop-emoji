@@ -1,4 +1,4 @@
-<div>
+<div align="center">
   
 # A rough and basic CSS and React Project 
 </div>
