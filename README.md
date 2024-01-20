@@ -1,3 +1,3 @@
-# A rough and simple CSS and React Project 
+# A rough and basic CSS and React Project 
 
 
