@@ -1,3 +1,3 @@
 # A rough and simple CSS and React Project
 
-# [react-open-box.vercel.app]
+# react-open-box.vercel.app
