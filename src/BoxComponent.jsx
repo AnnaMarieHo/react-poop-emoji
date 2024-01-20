@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Poop from "./PoopEmoji";
-import "./boxcomponent.css";
+import "./BoxComponent.css";
 
 export default function BoxComponent() {
   const [isOpen, setIsOpen] = useState(false);

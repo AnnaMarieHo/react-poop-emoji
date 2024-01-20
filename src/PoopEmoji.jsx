@@ -1,5 +1,5 @@
 import React from "react";
-import "./chatgptpoopemoji.css";
+import "./PoopEmoji.css";
 
 const PoopEmoji = ({ poopState }) => {
   return (
