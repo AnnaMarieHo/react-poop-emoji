@@ -1,3 +1,3 @@
-# A rough and simple CSS and React Project
+# A rough and simple CSS and React Project to practice CSS animations
 
-# react-open-box.vercel.app
+
