@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Poop from "./ChatGptPoopEmoji";
+import Poop from "./PoopEmoji";
 import "./boxcomponent.css";
 
 export default function BoxComponent() {
