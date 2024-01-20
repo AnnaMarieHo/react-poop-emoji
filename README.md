@@ -4,8 +4,8 @@
 
 # https://react-poop-emoji.vercel.app/
 
+![Screenshot 2024-01-20 133524](https://github.com/AnnaMarieHo/react-poop-emoji/assets/123429357/cb9d94f3-56b3-4bd6-b9a2-0376a44bb6ef)
 
-![image](https://github.com/AnnaMarieHo/react-poop-emoji/assets/123429357/62b809f5-23dc-4ce0-8609-4f5c545bdffe)
 ![Screenshot 2024-01-20 134104](https://github.com/AnnaMarieHo/react-poop-emoji/assets/123429357/537a1ecc-c0c6-4b8d-9d8d-ada783493bf0)
 
 
