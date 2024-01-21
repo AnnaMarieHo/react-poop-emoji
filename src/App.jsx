@@ -18,9 +18,9 @@ function App() {
 
   const starStyles1 = {
     position: "absolute",
-    top: -60,
+    top: -110,
     left: 250,
-    transform: "rotate(-75deg) scale(0.5)",
+    transform: "rotate(-55deg) scale(0.4)",
   };
 
   const starStyles2 = {
