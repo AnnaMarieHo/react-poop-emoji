@@ -133,21 +133,21 @@
   animation-timing-function: ease-in-out;
   transition: 0.3s;
 }
-/* .lid-container[lidBounce="1"] {
+.lid-container[lidBounce="1"] {
   animation-play-state: paused;
-  animation-name: lidBounce;
-  animation-duration: 3s;
+  animation-name: lidBounce-Hover;
+  animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;
 }
 .entire-box[boxBounce="1"] {
   animation-play-state: paused;
-  animation-name: bounce-1;
-  animation-duration: 3s;
+  animation-name: bounce-1-Hover;
+  animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;
 }
-.entire-box[boxBounce="0"] .lid-container[lidBounce="0"] {
+/* .entire-box[boxBounce="0"] .lid-container[lidBounce="0"] {
   animation-play-state: running;
 } */
 
@@ -158,6 +158,7 @@
 .entire-box-paused:active {
   animation-name: bounce-1-hover;
   animation-iteration-count: infinite;
+
   animation-timing-function: ease-in-out;
   animation-duration: 0.5s;
   transition: 0.3s;
