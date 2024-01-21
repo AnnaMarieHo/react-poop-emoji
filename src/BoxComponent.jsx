@@ -6,19 +6,24 @@ export default function BoxComponent({
   openClass,
   onMouseOver,
   onMouseOut,
+  isOpen,
 }) {
   const [lidBounce, setLidBounce] = useState(0);
   const [boxBounce, setBoxBounce] = useState(0);
+  const boxPaused = isOpen ? "entire-box-paused" : "entire-box";
+  const lidPaused = isOpen ? "lid-container-paused" : "lid-container";
 
   return (
     <>
       <div
         onMouseOver={onMouseOver}
         onMouseOut={onMouseOut}
-        className="entire-box"
+        className={boxPaused}
         onClick={() => {
-          setLidBounce(1);
-          setBoxBounce(1);
+          if (!isOpen) {
+            setLidBounce(1);
+            setBoxBounce(1);
+          }
         }}
         onAnimationEnd={() => {
           setLidBounce(0);
@@ -33,7 +38,7 @@ export default function BoxComponent({
           </div>
           <div className="box-shadow"></div>
           <div className={openClass}>
-            <div className="lid-container">
+            <div className={lidPaused}>
               <div className="bow-left"></div>
               <div className="bow-right"></div>
               <div className="bow-middle"></div>

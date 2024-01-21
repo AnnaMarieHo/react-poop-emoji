@@ -101,35 +101,111 @@
   transition: 0.3s;
 }
 
-.entire-box:hover {
+/* .entire-box:hover {
   animation-name: bounce-1;
-  /* animation-iteration-count: infinite; */
+  animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   animation-duration: 0.5s;
+} */
+
+.entire-box {
+  animation-name: bounce-1;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
+  transition: 0.3s;
+
+  /* animation-duration: 0.5s; */
 }
 
-.entire-box:hover .lid-container {
+/* .entire-box:hover .lid-container {
   animation-name: lidBounce;
   animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
   transition: 0.3s;
-}
+} */
 
-.lid-container[lidBounce="0"] {
+.lid-container {
   animation-name: lidBounce;
-  animation-duration: 0.5s;
+
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
   animation-timing-function: ease-in-out;
+  transition: 0.3s;
+}
+/* .lid-container[lidBounce="1"] {
+  animation-play-state: paused;
+  animation-name: lidBounce;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
 }
 .entire-box[boxBounce="1"] {
+  animation-play-state: paused;
   animation-name: bounce-1;
-  animation-duration: 0.5s;
+  animation-duration: 3s;
   animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
 }
+.entire-box[boxBounce="0"] .lid-container[lidBounce="0"] {
+  animation-play-state: running;
+} */
 
 /* .container:active {
   transform: scaleY(0.85);
 } */
 
+.entire-box-paused:active {
+  animation-name: bounce-1-hover;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+  transition: 0.3s;
+}
+
+.entire-box-paused:active .lid-container-paused {
+  /* animation-iteration-count: infinite; */
+  animation-name: lidBounce-hover;
+
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+  transition: 0.3s;
+}
+
+.lid-container-paused {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 98px;
+  height: 25px;
+  transition: 0.3s;
+  transform: translateY(-2.4rem);
+  transition: 0.3s;
+  /* animation-play-state: paused; */
+  animation-name: lidBounce-hover;
+  animation-iteration-count: 1;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  transition: 0.3s;
+}
+
+.entire-box-paused {
+  display: block;
+  position: absolute;
+  height: 100px;
+  /* animation-play-state: paused; */
+
+  animation-name: bounce-1-hover;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+  transition: 0.3s;
+  animation-iteration-count: 1;
+  /* animation-duration: 0.5s; */
+}
+.entire-box:active {
+  transform: scaleY(0.7);
+}
 .box-open {
   animation-duration: 0.5s;
   transform-origin: left;
@@ -137,7 +213,7 @@
   transition: 0.1s ease-in-out;
 }
 
-.container:active {
+/* .container:active {
   animation-name: bounce-1;
   animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
@@ -147,8 +223,8 @@
   animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
   transition: 0.3s;
-}
-@keyframes lidBounce {
+} */
+@keyframes lidBounce-hover {
   0% {
     transform: translateY(-2.4rem) scaleY(0.9);
   }
@@ -164,7 +240,61 @@
   }
 }
 
+@keyframes lidBounce {
+  0% {
+    transform: translateY(-2.4rem) scaleY(0.9);
+  }
+  25% {
+    transform: translateY(-2.4rem) scaleY(0.9);
+  }
+  50% {
+    transform: translateY(-2.4rem) scaleY(0.9);
+  }
+  75% {
+    transform: translateY(-2.4rem) scaleY(0.9);
+  }
+  82% {
+    transform: translateY(-3.4rem) scaleY(0.98) rotate(3deg);
+  }
+  88% {
+    transform: translateY(-2.4rem) scaleY(0.9) rotate(-20deg);
+  }
+  94% {
+    transform: translateY(-2.4rem) scaleY(0.98);
+  }
+  100% {
+    transform: translateY(-2.4rem) scaleY(0.9);
+  }
+}
+
 @keyframes bounce-1 {
+  0% {
+    transform: translateY(0) scaleY(1);
+  }
+  25% {
+    transform: translateY(0) scaleY(1);
+  }
+  50% {
+    transform: translateY(0) scaleY(1);
+  }
+  75% {
+    transform: translateY(0) scaleY(1);
+  }
+  82% {
+    transform: translateY(0) scaleY(0.9);
+  }
+  88% {
+    transform: translateY(-20px) scaleY(0.98);
+  }
+  94% {
+    transform: translateY(0) scaleY(0.9);
+  }
+  100% {
+    transform: translateY(0) scaleY(0.98);
+  }
+}
+
+@keyframes bounce-1-hover {
   0% {
     transform: translateY(0) scaleY(0.9);
   }

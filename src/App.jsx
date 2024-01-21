@@ -36,7 +36,7 @@ function App() {
     setIsOpen((e) => !e);
   }
 
-  const openClass = isOpen ? "box-open" : " ";
+  const openClass = isOpen ? "box-open" : "";
   const poopState = isOpen ? "poop-jump" : "whole-emoji";
 
   return (
@@ -57,8 +57,9 @@ function App() {
           onMouseOut={handleMouseOut}
           openClass={openClass}
           handleIsOpen={handleIsOpen}
+          isOpen={isOpen}
         />
-        {isHovering && (
+        {!isOpen && (
           <>
             <Star location={starStyles1} />
             <Star location={starStyles2} />
