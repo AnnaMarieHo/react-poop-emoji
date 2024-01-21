@@ -19,14 +19,14 @@ function App() {
   const starStyles1 = {
     position: "absolute",
     top: -110,
-    left: 250,
+    left: 50,
     transform: "rotate(-55deg) scale(0.4)",
   };
 
   const starStyles2 = {
     position: "absolute",
     top: -80,
-    left: 100,
+    left: -100,
     transform: "rotate(30deg) scale(0.4)",
   };
 
@@ -42,16 +42,21 @@ function App() {
   return (
     <div>
       <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          minWidth: 400,
-          transform: "scale(1.4)",
-        }}
+        className="box-size"
+        // style={{
+        //   display: "flex",
+        //   alignItems: "center",
+        //   justifyContent: "center",
+        //   minWidth: 400,
+        //   transform: "scale(1.4)",
+        // }}
       >
-        {isOpen && <Poop poopState={poopState} />}
-
+        {isOpen && (
+          <>
+            <Poop poopState={poopState} />
+          </>
+        )}
+        {/* <div className="poop-box" draggable="true"></div> */}
         <BoxComponent
           onMouseOver={handleMouseOver}
           onMouseOut={handleMouseOut}

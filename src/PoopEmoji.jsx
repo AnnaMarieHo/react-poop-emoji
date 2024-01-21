@@ -25,7 +25,7 @@ const PoopEmoji = ({ poopState }) => {
 
   return (
     <>
-      <div className="emoji-box">
+      <div className="">
         <div className={poopState}>
           <div
             className="emoji-translated"

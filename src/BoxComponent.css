@@ -133,20 +133,20 @@
   animation-timing-function: ease-in-out;
   transition: 0.3s;
 }
-.lid-container[lidBounce="1"] {
+/* .lid-container {
   animation-play-state: paused;
   animation-name: lidBounce-Hover;
   animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;
-}
-.entire-box[boxBounce="1"] {
+} */
+/* .entire-box {
   animation-play-state: paused;
   animation-name: bounce-1-Hover;
   animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;
-}
+} */
 /* .entire-box[boxBounce="0"] .lid-container[lidBounce="0"] {
   animation-play-state: running;
 } */
@@ -165,7 +165,7 @@
 }
 
 .entire-box-paused:active .lid-container-paused {
-  /* animation-iteration-count: infinite; */
+  animation-iteration-count: infinite;
   animation-name: lidBounce-hover;
 
   animation-timing-function: ease-in-out;
